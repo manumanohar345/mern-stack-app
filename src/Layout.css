@@ -1,0 +1,53 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: #282c34;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer {
+    background: #282c34;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 1rem 0;
+}
+
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-area {
+    flex: 1;
+    padding: 2rem;
+    background: #fff;
+}
