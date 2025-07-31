@@ -21,6 +21,11 @@
     "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
-    "react-router-dom": "^7.7.1"
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0",
+    "react-router-dom": "^7.7.1",
+    "uuid": "^11.1.0"
   }
 }
