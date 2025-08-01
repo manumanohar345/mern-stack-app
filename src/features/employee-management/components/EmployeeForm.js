@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './EmployeeForm.css';
 
 function EmployeeForm({ onSubmit, initialData }) {
   const [name, setName] = useState(initialData?.name || '');
@@ -12,7 +13,7 @@ function EmployeeForm({ onSubmit, initialData }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="employee-form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Name"

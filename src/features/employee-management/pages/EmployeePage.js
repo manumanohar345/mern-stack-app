@@ -31,26 +31,31 @@ function EmployeePage() {
 
   const handleUpdate = async (employee) => {
     // Call backend API to update employee
-    const res = await fetch(`http://localhost:5000/api/employees/${editing.id}`, {
+    const empId = editing._id || editing.id;
+    const res = await fetch(`http://localhost:5000/api/employees/${empId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(employee),
     });
     const data = await res.json();
-    setEmployees(employees.map(e => (e.id === editing.id ? data : e)));
+    setEmployees(employees.map(e => ((e._id || e.id) === empId ? data : e)));
     setEditing(null);
   };
 
   const handleDelete = async (id) => {
     // Call backend API to delete employee
     await fetch(`http://localhost:5000/api/employees/${id}`, { method: 'DELETE' });
-    setEmployees(employees.filter(e => e.id !== id));
+    setEmployees(employees.filter(e => (e._id || e.id) !== id));
   };
 
   return (
     <div>
       <h2>Employee Management</h2>
-      <EmployeeForm onSubmit={editing ? handleUpdate : handleAdd} initialData={editing} />
+      <EmployeeForm
+        key={editing ? editing._id || editing.id : 'new'}
+        onSubmit={editing ? handleUpdate : handleAdd}
+        initialData={editing}
+      />
       <EmployeeList employees={employees} onEdit={handleEdit} onDelete={handleDelete} />
     </div>
   );

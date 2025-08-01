@@ -1,0 +1,55 @@
+
+.employee-list {
+  margin: 2rem 0;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employee-table th, .employee-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.employee-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.employee-table tr:not(:last-child) td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.employee-table td {
+  vertical-align: middle;
+}
+
+.employee-table button {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border: none;
+  border-radius: 4px;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.employee-table button:last-child {
+  background: #e53935;
+  margin-right: 0;
+}
+
+.employee-table button:hover {
+  filter: brightness(0.95);
+}
